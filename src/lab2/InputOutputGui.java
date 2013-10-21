@@ -26,6 +26,8 @@ public class InputOutputGui {
             lastName = nameService.extractLastName(fullName);
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
+            startConversation();
+            return;
         }
 
         String msg = "Your last name is: " + lastName;

@@ -30,10 +30,14 @@ public class Challenge1 {
     }
 
     public String extractLastName(String fullName) throws Exception {
-        if (fullName.toString() == null || fullName.length() == 0) {
+        if (fullName == null || fullName.length() == 0) {
             throw new IllegalArgumentException(ERR_MSG);
         }
+        
+        
         String[] nameParts = fullName.split(" ");
-        return nameParts[LAST_NAME_IDX];
+        
+        
+        return nameParts[nameParts.length - 1];
     }
 }
